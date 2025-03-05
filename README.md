@@ -1,13 +1,17 @@
 # Whisper Input
 
-Whisper Input 是受到即友[FeiTTT](https://web.okjike.com/u/DB98BE7A-9DBB-4730-B6B9-2DC883B986B1)启发做的一个简单的 python 代码。可以实现按下 Option 按钮开始录制，抬起按钮就结束录制，并调用 Groq `Whisper Large V3 Turbo` 模型进行转译，由于 Groq 的速度非常快，所以大部分的语音输入都可以在 1-2s 内反馈。并且得益于 whisper 的强大能力，转译效果非常不错。
+Whisper Input 是基于 ErlichLiu/Whisper-Input.git 项目的 fork，增加了本地离线语音模型的支持。
 
-- 🎉🎉由于目前已经发现了更好用的语音输入软件[WhisperKeyBoard](https://whisperkeyboard.app/)，非常推荐大家可以直接使用这款软件即可。Whisper Input 的中心将继续回到 Voice + Agents 上。
+默认自动下载 SenseVoiceSmall 模型，使用本地模型运行。
+也可以配置使用 WhisperBase / WhisperV2Large / WhisperV3Large 的模型。
+
+或者配置硅基流动 SiliconFlow, Groq 的 API Key 来使用免费的在线模型。
+
+可以实现按下 Option 按钮开始录制，抬起按钮就结束录制，并调用 Groq `Whisper Large V3 Turbo` 模型进行转译，由于 Groq 的速度非常快，所以大部分的语音输入都可以在 1-2s 内反馈。并且得益于 whisper 的强大能力，转译效果非常不错。
+
 
 - 支持由 SiliconFlow 托管的 `FunAudioLLM/SenseVoiceSmall` 模型，速度比 Groq 托管的 `Whisper Large V3 Turbo` 更快，识别更准确，并且自带标点符号。**最重要的是普通用户也无用量限制！**
 
-## 当前阶段工作（20250129 更新）
-当前阶段正在构建一个简易的 macOS 客户端。考虑到使用这个项目的大部分用户都是非程序员背景的，并且通常大量依赖语音输入功能的用户也有一部分是视力障碍用户，所以近期在着重做 macOS 客户端以及无障碍开发，未来将上线网站对外公布 macOS 客户端。如果你对 Windows 客户端的开发以及无障碍开发有经验和兴趣，欢迎与我联系：微信 geekthings。
 
 ## 功能
 
@@ -38,7 +42,8 @@ Whisper Input 是受到即友[FeiTTT](https://web.okjike.com/u/DB98BE7A-9DBB-473
 2. 创建并复制免费的 API KEY：https://cloud.siliconflow.cn/account/ak
 3. 打开 `终端` ，进入到想要下载项目的文件夹
     ```bash
-    git clone git@github.com:ErlichLiu/Whisper-Input.git
+    git clone https://github.com/davideuler/local-whisper-input
+    cd local-whisper-input
     ```
 4. 创建虚拟环境 【推荐】
     ```bash
@@ -135,10 +140,10 @@ Whisper Input 是受到即友[FeiTTT](https://web.okjike.com/u/DB98BE7A-9DBB-473
 由于这个程序需要一直在后台运行，所以最好找一个自己不会经常下意识关掉的终端或者终端里的 Tab 来运行，不然很容易会不小心关掉。
 
 
+## Thanks to
 
-关注作者个人网站，了解更多项目: https://erlich.fun
-
-
+https://github.com/ErlichLiu/Whisper-Input
+https://erlich.fun
 
 
 
