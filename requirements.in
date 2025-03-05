@@ -12,3 +12,10 @@ openai
 httpx
 requests
 opencc-python-reimplemented
+# 本地语音识别模型依赖（可选）
+# 方法一：使用 funasr-onnx（推荐，性能更好）
+funasr-onnx
+# 方法二：使用 modelscope（提供更多模型和功能）
+modelscope
+# 方法三：使用 Whisper 模型（支持 base、large-v2、large-v3）
+openai-whisper

@@ -11,7 +11,8 @@ def setup_logger():
     # 控制台处理器
     console_handler = colorlog.StreamHandler()
     console_handler.setFormatter(colorlog.ColoredFormatter(
-        fmt='%(asctime)s - %(log_color)s%(levelname)-8s%(reset)s - %(message)s',
+        #fmt='%(asctime)s - %(log_color)s%(levelname)-8s%(reset)s - %(message)s',
+        fmt='%(asctime)s - %(name)s - %(log_color)s%(levelname)-8s%(reset)s - %(filename)s.%(funcName)s:%(lineno)d - %(message)s',
         datefmt='%H:%M:%S',
         log_colors={
             'DEBUG':    'cyan',
@@ -46,3 +47,4 @@ def setup_logger():
     return logger
 
 logger = setup_logger()
+

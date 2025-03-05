@@ -158,6 +158,11 @@ Whisper Input 是受到即友[FeiTTT](https://web.okjike.com/u/DB98BE7A-9DBB-473
 
 ## 更新日志
 
+#### 2025.03.05
+> 1. 添加多种本地模型选择，支持 SenseVoiceSmall、WhisperBase、WhisperV2Large 和 WhisperV3Large
+
+> 2. 添加本地 ONNX 模型支持，无需联网，无需 API Key，保护隐私的同时提供更快的响应速度
+
 #### 2025.01.25
 > 1. 支持通过环境变量配置恢复原始剪贴板内容，环境变量 `KEEP_ORIGINAL_CLIPBOARD` 默认为 `true` ，设置为 `false` 的时候不恢复
 
