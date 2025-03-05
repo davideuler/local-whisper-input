@@ -1,4 +1,4 @@
-import os
+import os, traceback
 import time
 import io
 import tempfile
@@ -45,7 +45,7 @@ class LocalSenseVoiceSmallProcessor:
             logger.error("请安装必要的依赖: pip install -U funasr-onnx")
             raise
         except Exception as e:
-            logger.error(f"初始化本地 SenseVoiceSmall 模型失败: {e}")
+            logger.error(f"初始化本地 SenseVoiceSmall 模型失败: {e} {traceback.format_exc()}")
             raise
     
     def _save_audio_to_temp_file(self, audio_buffer):
